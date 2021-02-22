@@ -34,7 +34,9 @@ navigator.mediaDevices.getUserMedia({
         const userConnect = Swal.mixin({
             toast: true,
             position: 'top-end',
-            confirmButtonText: 'Confirm',
+            showConfirmButton: false,
+            timer: 500,
+            timerProgressBar: true
         })
         userConnect.fire({
             icon: 'success',
