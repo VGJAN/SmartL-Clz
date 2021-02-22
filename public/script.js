@@ -35,7 +35,7 @@ navigator.mediaDevices.getUserMedia({
             toast: true,
             position: 'top-end',
             showConfirmButton: false,
-            timer: 500,
+            timer: 800,
             timerProgressBar: true
         })
         userConnect.fire({
@@ -68,7 +68,7 @@ socket.on('user-disconnected', userId => {
         toast: true,
         position: 'top-end',
         showConfirmButton: false,
-        timer: 500,
+        timer: 800,
         timerProgressBar: true
     })
     userDisconnect.fire({
