@@ -75,6 +75,7 @@ socket.on('user-disconnected', userId => {
         icon: 'error',
         title: 'User Disconnected'
     })
+    console.log("user disconnected")
 })
 
 // GET THE OWN USER ID
