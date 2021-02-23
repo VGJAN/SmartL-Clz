@@ -5,9 +5,9 @@ const videoGrid = document.getElementById('video-grid');
 const myVideo = document.createElement('video');
 myVideo.muted = true;
 const peer = new Peer(undefined, {
-    path: '/peerjs',
+    // path: '/peerjs',
     host: '/',
-    port: '443',
+    port: '3001',
 });
 
 // ACCESS THE USER'S VIDEO AND AUDIO
@@ -56,7 +56,7 @@ navigator.mediaDevices.getUserMedia({
 
     // CREATE MESSAGE
     socket.on('createMessage', message => {
-        $('.messages').append(`<li align="right" class="message"><b>User</b><br>${message}</li>`);
+        $('.messages').append(`<li class="message"><b>User</b><br>${message}</li>`);
         scrollToBottom()
     })
 })

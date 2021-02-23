@@ -4,10 +4,7 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const { v4: uuidv4 } = require('uuid');
-const { ExpressPeerServer } = require('peer');
-const peerServer = ExpressPeerServer(server, {
-    debug: true
-});
+// s
 
 // SERVER TO SET THE TEMPLATE ENGINE AS VIEW ENGINE TO TEMPLATE THE EJS FILE AS HTML FILE FOR SENT TO USERS
 app.set('view engine', 'ejs');
@@ -15,7 +12,7 @@ app.set('view engine', 'ejs');
 // SERVER TO USE THE SCRIPT.JS FILE WHICH IS IN PUBLIC FOLDER
 app.use(express.static('public'));
 
-app.use('/peerjs', peerServer);
+// app.use('/peerjs', peerServer);
 
 // SERVER TO GET THE UUID THAT'S THE UNIQUE ID
 app.get('/', (req, res) => {
