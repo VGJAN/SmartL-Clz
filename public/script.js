@@ -58,8 +58,7 @@ navigator.mediaDevices.getUserMedia({
     socket.on('createMessage', message => {
         $('.messages').append(`<li class="message"><b>User</b><br>${message}</li>`);
         scrollToBottom()
-    })
-})
+
 
 // DISCONNECT THE CONNECTION 
 socket.on('user-disconnected', userId => {
@@ -75,9 +74,10 @@ socket.on('user-disconnected', userId => {
         icon: 'error',
         title: 'User Disconnected'
     })
-    console.log("user disconnected")
 })
 
+})
+})
 // GET THE OWN USER ID
 peer.on('open', id => {
     socket.emit('join-room', ROOM_ID, id);
