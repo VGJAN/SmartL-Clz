@@ -5,9 +5,9 @@ const videoGrid = document.getElementById('video-grid');
 const myVideo = document.createElement('video');
 myVideo.muted = true;
 const peer = new Peer(undefined, {
-    // path: '/peerjs',
+    path: '/peerjs',
     host: '/',
-    port: '3001',
+    port: '443',
 });
 
 // ACCESS THE USER'S VIDEO AND AUDIO
