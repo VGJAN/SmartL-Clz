@@ -97,11 +97,11 @@
             </td>
 
             <td style="padding: 2%;">
-                <div class="container">
+                <div class="container" id="open-invite-popup">
                     <div class="row">
                         <div class="card2">
-                            <div class="card2" align="center" onclick="Invite()">
-                                    <i class="fas fa-user-plus"></i>
+                            <div class="card2" align="center">
+                                <i class="fas fa-user-plus"></i>
                             </div>
                         </div>
                     </div>
@@ -123,9 +123,9 @@
             </td>
 
             <td style="padding: 2%;">
-                <div class="container">
+                <div class="container" id="open-leave-popup">
                     <div class="row">
-                        <div class="card2" align="center" onclick="Leave()">
+                        <div class="card2" align="center">
                             <i class="fas fa-door-open"></i>
                         </div>
                     </div>
@@ -134,7 +134,55 @@
         </tr>
     </table>
 
-    <div class="modal fade col-xl-12 col-lg-12 col-md-12 col-sm-12" id="Lang" tabindex="-1" role="dialog" aria-labelledby="Lang" aria-hidden="true">
+    <div class="invite-popup center">
+        <div class="close-invite-btn">
+            <button id="close-invite-popup">
+            &times
+            </button>
+        </div>
+
+        <div class="clipboard-icon">
+            <i class="fas fa-clipboard"></i>
+        </div>
+
+        <div class="title">
+            Please copy your room link
+        </div>
+
+        <div class="description">
+            to invite others.
+        </div>
+
+        <div class="link-bar">
+            <input id="link" class="link" type="text" readonly value="">
+            <button id="copy" class="copy">Copy</button>
+        </div>
+    </div>
+
+    <div class="leave-popup center">
+        <div class="close-leave-btn">
+            <button id="close-leave-popup">
+                &times
+            </button>
+        </div>
+        
+        <div class="exit-icon">
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+        
+        <div class="title">
+             Are you sure leaving the meeting ?
+        </div>
+        
+        <div>
+            <button id="cancel" class="cancel">Cancel</button>
+            <button id="leave" class="leave">Leave</button>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+
+    <!-- <div class="modal fade col-xl-12 col-lg-12 col-md-12 col-sm-12" id="Lang" tabindex="-1" role="dialog" aria-labelledby="Lang" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -153,9 +201,8 @@
             </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="footer"></div>
 
     <!-- <div class="controls">
                             <div class="block">

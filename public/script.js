@@ -7,7 +7,7 @@ myVideo.muted = true;
 const peer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',
-    port: '443',
+    port: '3000',
 });
 
 // ACCESS THE USER'S VIDEO AND AUDIO
@@ -166,15 +166,51 @@ const setPlayButton = () => {
     document.querySelector('.stop-button').innerHTML = html;
 }
 
-const Invite = () => {
-    Swal.fire({
-        icon: 'info',
-        title: 'Please copy your room link to invite others.',
-        input: 'text',
-        inputLabel: 'This is your URL',
-        inputValue: window.location.href
-    })
+const link = document.getElementById("link")
+const copy = document.getElementById("copy")
+
+copy.onclick = function () {
+  link.select();
+  document.execCommand("Copy")
 }
+
+document.getElementsByTagName('input')[1].value=window.location.href
+
+document.getElementById("open-invite-popup").addEventListener("click",function(){
+  document.getElementsByClassName("invite-popup")[0].classList.add("active");
+});
+     
+document.getElementById("close-invite-popup").addEventListener("click",function(){
+  document.getElementsByClassName("invite-popup")[0].classList.remove("active");
+});
+
+const leave = document.getElementById("leave")
+
+leave.onclick = function () {
+  history.back()
+}
+
+document.getElementById("open-leave-popup").addEventListener("click",function(){
+  document.getElementsByClassName("leave-popup")[0].classList.add("active");
+});
+     
+document.getElementById("close-leave-popup").addEventListener("click",function(){
+  document.getElementsByClassName("leave-popup")[0].classList.remove("active");
+});
+
+document.getElementById("cancel").addEventListener("click",function(){
+  document.getElementsByClassName("leave-popup")[0].classList.remove("active");
+});
+
+// const Invite = () => {
+//     Swal.fire({
+//         icon: 'info',
+//         title: 'Please copy your room link to invite others.',
+//         input: 'text',
+//         inputLabel: 'This is your URL',
+//         inputValue: window.location.href
+//     })
+// }
 
 const Leave = () => {
     Swal.fire({
