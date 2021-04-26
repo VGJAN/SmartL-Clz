@@ -196,13 +196,10 @@ div.card {
     font-size: 35px;
     color: #f39c12
 }
-
-.center {
+.invite-popup {
     position:absolute;
     top:50%;
     left:50%;
-}
-.invite-popup {
     width:350px;
     height:295px;
     padding:0px 20px;
@@ -288,6 +285,9 @@ div.card {
     font-size:18px;
 }
 .leave-popup {
+    position:absolute;
+    top:50%;
+    left:50%;
     width:350px;
     height:295px;
     padding:0px 20px;
