@@ -228,6 +228,14 @@ const Leave = () => {
     })
 }
 
+document.getElementById("open-chat-body").addEventListener("click",function(){
+    document.getElementsByClassName("chat-body")[0].classList.add("active");
+});
+       
+document.getElementById("close-chat-body").addEventListener("click",function(){
+    document.getElementsByClassName("chat-body")[0].classList.remove("active");
+});
+
 const checkbox = document.getElementById('checkbox');
 
 checkbox.addEventListener('change', () => {

@@ -196,7 +196,9 @@ div.card {
     font-size: 35px;
     color: #f39c12
 }
+
 .invite-popup {
+    border: 5px solid #ababab;
     position:absolute;
     top:50%;
     left:50%;
@@ -215,12 +217,14 @@ div.card {
     top 1000ms ease-in-out,
     transform 1000ms ease-in-out;
 }
+
 .invite-popup.active {
     opacity:1;
     top:50%;
     transform:translate(-50%,-50%) scale(1);
     transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
 }
+
 .invite-popup .clipboard-icon {
     margin:5px 0px;
     width:80px;
@@ -231,19 +235,23 @@ div.card {
     display:inline-block;
     margin-top:-6px;
 }
+
 .invite-popup .clipboard-icon i.fas {
     font-size:55px;
     color:#353535;
     margin-top:6px;
 }
+
 .invite-popup .title {
     margin:0px;;
     font-size:25px;
     font-weight:600;
 }
+
 .invite-popup .description {
     font-size:20px;
 }
+
 .invite-popup .close-invite-btn button {
     color:#111;
     font-size:30px;
@@ -259,13 +267,16 @@ div.card {
     top:10px;
     opacity:0;
 }
+
 .invite-popup.active > div {
     top:0px;
     opacity:1;
 }
+
 .link-bar {
     margin-top:2px;
 }
+
 .link {
     background-color:transparent;
     border-color:#111;
@@ -274,6 +285,7 @@ div.card {
     padding:2px;
     width:300px;
 }
+
 .copy {
     border:none;
     margin-top:8px;
@@ -284,10 +296,12 @@ div.card {
     padding-bottom:5px;
     font-size:18px;
 }
+
 .leave-popup {
+    border: 5px solid #ababab;
     position:absolute;
     top:50%;
-    left:50%;
+    left:90%;
     width:350px;
     height:295px;
     padding:0px 20px;
@@ -302,14 +316,16 @@ div.card {
     transition: opacity 300ms ease-in-out,
       top 1000ms ease-in-out,
       transform 1000ms ease-in-out;
-  }
-  .leave-popup.active {
+}
+
+.leave-popup.active {
     opacity:1;
     top:50%;
     transform:translate(-50%,-50%) scale(1);
     transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
-  }
-  .leave-popup .exit-icon {
+}
+
+.leave-popup .exit-icon {
     margin:5px 0px;
     width:80px;
     height:80px;
@@ -318,19 +334,22 @@ div.card {
     text-align:center;
     display:inline-block;
     margin-top:-6px;
-  }
-  .leave-popup .exit-icon i.fas {
+}
+
+.leave-popup .exit-icon i.fas {
     font-size:50px;
     color:#353535;
     margin-top:10px;
     margin-left:5px;
-  }
-  .leave-popup .title {
+}
+
+.leave-popup .title {
     margin:0px;;
     font-size:25px;
     font-weight:600;
-  }
-  .leave-popup .close-leave-btn button {
+}
+
+.leave-popup .close-leave-btn button {
     color:#111;
     font-size:30px;
     cursor:pointer;
@@ -338,18 +357,20 @@ div.card {
     border:none;
     background-color:transparent;
     margin-left:93%;
-  }
+}
   
-  .leave-popup > div {
+.leave-popup > div {
     position:relative;
     top:10px;
     opacity:0;
-  }
-  .leave-popup.active > div {
+}
+
+.leave-popup.active > div {
     top:0px;
     opacity:1;
-  }
-  .leave {
+}
+
+.leave {
     font-size:20px;
     border:none;
     margin-top:20px;
@@ -359,8 +380,9 @@ div.card {
     padding-left:23px;
     padding-right:23px;
     padding-bottom:5px;
-  }
-  .cancel {
+}
+
+.cancel {
     font-size:20px;
     border:none;
     margin-top:8px;
@@ -370,7 +392,91 @@ div.card {
     padding-left:20px;
     padding-right:20px;
     padding-bottom:5px;
-  }
+}
+
+.chat-body {
+    position:absolute;
+    margin-left:85%;
+    width:350px;
+    height:95%;
+    padding:0px 20px;
+    background:#f5f5f5;
+    border-radius:10px;
+    box-sizing:border-box;
+    z-index:25;
+    text-align:center;
+    opacity:0;
+    top:-200%;
+    transform:translate(-50%,-50%) scale(0.5);
+    transition: opacity 300ms ease-in-out,
+      top 1000ms ease-in-out,
+      transform 1000ms ease-in-out;
+}
+
+.chat-body.active {
+    opacity:1;
+    top:50%;
+    transform:translate(-50%,-50%) scale(1);
+    transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
+}
+
+.chat-body .close-chat-btn button {
+    color:#111;
+    font-size:30px;
+    cursor:pointer;
+    transition: all 300ms ease-in-out;
+    border:none;
+    background-color:transparent;
+    margin-left:97%;
+    margin-top:-15px;
+}
+  
+.chat-body > div {
+    position:relative;
+    top:10px;
+    opacity:0;
+}
+
+.chat-body.active > div {
+    top:0px;
+    opacity:1;
+}
+
+.chat-body .header {
+    margin-top:-24px;
+    padding-bottom:5px;
+    border-bottom:1px solid #ababab;
+}
+
+.chat-body {
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e6e6;
+    border: 5px solid #ababab;
+}
+
+.chat-display {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.type-bar {
+    padding: 20px 10px;
+    display: flex;
+    border-top:1px solid #ababab;
+}
+
+.type-bar input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: #444444;
+}
+
+.messages {
+    color: #333333;
+    list-style: none;
+}
 
   /* -------DARK MODE------- */
   
